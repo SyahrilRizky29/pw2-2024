@@ -42,6 +42,9 @@ if ($brand=="TV") {
 </head>
 <body>
 
+<div>
+<h1>Belanja Online</h1>
+</div>
 <form class="p-5" action="form_belanja.php" method="POST">
   <div class="form-group row">
     <label for="customer" class="col-4 col-form-label">Customer</label> 
