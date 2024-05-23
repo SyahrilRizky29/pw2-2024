@@ -29,3 +29,4 @@ Route::get('/nilai', function () {
 });
 
 Route::get('/admin',[AdminController::class,'index']);
+Route::get('/admin/pasien',[PasienController::class,'index']);

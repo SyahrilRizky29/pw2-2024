@@ -1,5 +1,6 @@
-@include('admin.header')
-@include('admin.sidebar')
+@include('admin.partials.header')
+@include('admin.partials.sidebar')
+
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -38,7 +39,35 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    Start creating your amazing application!
+                    <h1 class="my-4">Daftar Pasien</h1>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Kode</th>
+                                <th>Nama</th>
+                                <th>Tempat Lahir</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Gender</th>
+                                <th>Email</th>
+                                <th>Alamat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($pasien as $pasien)
+                                <tr>
+                                    <td>{{ $pasien->id }}</td>
+                                    <td>{{ $pasien->kode }}</td>
+                                    <td>{{ $pasien->nama }}</td>
+                                    <td>{{ $pasien->tmp_lahir }}</td>
+                                    <td>{{ $pasien->tgl_lahir }}</td>
+                                    <td>{{ $pasien->gender }}</td>
+                                    <td>{{ $pasien->email }}</td>
+                                    <td>{{ $pasien->alamat }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
@@ -54,4 +83,4 @@
     <!-- /.content-wrapper -->
 </div>
 
-@include('admin.footer')
+@include('admin.partials.footer')
