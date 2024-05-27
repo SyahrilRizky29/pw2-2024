@@ -1,5 +1,5 @@
-@include('admin.header')
-@include('admin.sidebar')
+@include('admin.partials.header')
+@include('admin.partials.sidebar')
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Blank Page</h1>
+                        <h1>Dashboard Admin</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Blank Page</li>
+                            <li class="breadcrumb-item active">Admin Warnet</li>
                         </ol>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Title</h3>
+                    <h3 class="card-title">Billing Pengguna</h3>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -38,11 +38,11 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    Start creating your amazing application!
+                    Paket 2 Jam
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                    Footer
+                    Total Bayar 5k
                 </div>
                 <!-- /.card-footer-->
             </div>
@@ -54,4 +54,4 @@
     <!-- /.content-wrapper -->
 </div>
 
-@include('admin.footer')
+@include('admin.partials.footer')

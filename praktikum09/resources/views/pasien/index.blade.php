@@ -1,6 +1,5 @@
 @include('admin.partials.header')
 @include('admin.partials.sidebar')
-
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
