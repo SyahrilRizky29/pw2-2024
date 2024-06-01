@@ -1,5 +1,5 @@
-@include('admin.partials.header')
-@include('admin.partials.sidebar')
+@include('pasien.header')
+@include('pasien.sidebar')
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -38,7 +38,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h1 class="my-4">Daftar Pasien</h1>
+                <h1 class="my-4">Daftar Pasien</h1>
+                    <a href="{{ route('pasiens.create') }}" class="btn btn-primary">Tambah Pasien</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -50,6 +51,7 @@
                                 <th>Gender</th>
                                 <th>Email</th>
                                 <th>Alamat</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -63,6 +65,15 @@
                                     <td>{{ $pasien->gender }}</td>
                                     <td>{{ $pasien->email }}</td>
                                     <td>{{ $pasien->alamat }}</td>
+                                    <td>
+                                        <a href="{{ route('pasiens.show', $pasien->id) }}" class="btn btn-info btn-sm">Read</a>
+                                        <a href="{{ route('pasiens.edit', $pasien->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                        <form action="{{ route('pasiens.destroy', $pasien->id) }}" method="POST" style="display: inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this pasien?')">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -82,4 +93,4 @@
     <!-- /.content-wrapper -->
 </div>
 
-@include('admin.partials.footer')
+@include('pasien.footer')

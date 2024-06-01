@@ -19,5 +19,8 @@ class Pasien extends Model
         'gender',
         'email',
         'alamat',
+        
     ];
+    // disable timestamps
+    public $timestamps = false;
 }
