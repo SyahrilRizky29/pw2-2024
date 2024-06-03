@@ -1,5 +1,5 @@
-@include('pasien.header')
-@include('pasien.sidebar')
+@include('kelurahan.header')
+@include('kelurahan.sidebar')
 
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
@@ -66,4 +66,4 @@
     <!-- /.content-wrapper -->
 </div>
 
-@include('pasien.footer')
+@include('kelurahan.footer')
