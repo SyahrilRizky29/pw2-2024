@@ -16,7 +16,9 @@
                       alt="User Image">
               </div>
               <div class="info">
-                  <a href="#" class="d-block" style="color: #fff;">Anak Bogor</a>
+                  <a href="#" class="d-block" style="color: #fff;">
+                        {{ auth()->user()->name }}
+                  </a>
               </div>
           </div>
 
